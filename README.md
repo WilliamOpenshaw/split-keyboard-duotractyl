@@ -28,6 +28,7 @@ It runs [QMK firmware](https://qmk.fm) on two Adafruit KB2040 (RP2040) controlle
 - [Troubleshooting](#troubleshooting)
 - [Version history](#version-history)
 - [Repository layout](#repository-layout)
+- [License](#license)
 
 ---
 
@@ -172,32 +173,32 @@ These photos show the build in order, from May to July 2025. The case is shown f
 
 <table>
 <tr>
-<td width="50%"><a href="PXL_20250528_053931519.jpg"><img src="PXL_20250528_053931519.jpg" alt="Underside of one half with switches installed and a 1N4148 diode soldered to each switch"></a></td>
-<td width="50%"><a href="PXL_20250528_084043444.jpg"><img src="PXL_20250528_084043444.jpg" alt="The same half with the diode legs joined into rows and blue wire added for the columns"></a></td>
+<td width="50%"><a href="Build%20PIctures/PXL_20250528_053931519.jpg"><img src="Build%20PIctures/PXL_20250528_053931519.jpg" alt="Underside of one half with switches installed and a 1N4148 diode soldered to each switch"></a></td>
+<td width="50%"><a href="Build%20PIctures/PXL_20250528_084043444.jpg"><img src="Build%20PIctures/PXL_20250528_084043444.jpg" alt="The same half with the diode legs joined into rows and blue wire added for the columns"></a></td>
 </tr>
 <tr>
 <td><b>1. Switches and diodes.</b> The switches are pressed into the printed case, and a 1N4148 diode is soldered to each one. The diode legs are left long so they can be bent over and joined to form the row wires.</td>
 <td><b>2. Rows and columns.</b> The bare diode legs are joined along each row. Insulated blue wire links each column, so the column wires can cross over the rows without touching them.</td>
 </tr>
 <tr>
-<td><a href="PXL_20250602_132059770.jpg"><img src="PXL_20250602_132059770.jpg" alt="Both halves side by side: one with only switches installed, one fully wired"></a></td>
-<td><a href="PXL_20250724_025341112.jpg"><img src="PXL_20250724_025341112.jpg" alt="Two Adafruit KB2040 boards with blue wires soldered to every pin, next to two round PMW3360 sensor boards"></a></td>
+<td><a href="Build%20PIctures/PXL_20250602_132059770.jpg"><img src="Build%20PIctures/PXL_20250602_132059770.jpg" alt="Both halves side by side: one with only switches installed, one fully wired"></a></td>
+<td><a href="Build%20PIctures/PXL_20250724_025341112.jpg"><img src="Build%20PIctures/PXL_20250724_025341112.jpg" alt="Two Adafruit KB2040 boards with blue wires soldered to every pin, next to two round PMW3360 sensor boards"></a></td>
 </tr>
 <tr>
 <td><b>3. One half wired, one to go.</b> The right side of the photo shows a fully wired matrix. The other half has its switches in and is ready for diodes.</td>
 <td><b>4. Controllers and sensors.</b> Wires soldered to every pin on both KB2040s, and to the two PMW3360 sensor boards.</td>
 </tr>
 <tr>
-<td><a href="PXL_20250724_032421143.jpg"><img src="PXL_20250724_032421143.jpg" alt="The second half fully wired, held up next to a KB2040 and a sensor board with wires attached"></a></td>
-<td><a href="PXL_20250724_041526902.jpg"><img src="PXL_20250724_041526902.jpg" alt="A wired half above both sensor boards and both KB2040s mounted in printed holders with their audio jacks and USB-C ports"></a></td>
+<td><a href="Build%20PIctures/PXL_20250724_032421143.jpg"><img src="Build%20PIctures/PXL_20250724_032421143.jpg" alt="The second half fully wired, held up next to a KB2040 and a sensor board with wires attached"></a></td>
+<td><a href="Build%20PIctures/PXL_20250724_041526902.jpg"><img src="Build%20PIctures/PXL_20250724_041526902.jpg" alt="A wired half above both sensor boards and both KB2040s mounted in printed holders with their audio jacks and USB-C ports"></a></td>
 </tr>
 <tr>
 <td><b>5. Second half wired.</b> Both matrices are done. The brass heat-set inserts around the edge of the case take the screws that hold the case together.</td>
 <td><b>6. Holders fitted.</b> Each KB2040 sits in its 3D-printed holder next to the 3.5 mm audio jack, with the USB-C port facing out of the back of the case.</td>
 </tr>
 <tr>
-<td><a href="PXL_20250725_125013004.jpg"><img src="PXL_20250725_125013004.jpg" alt="A half with the KB2040 connected to the matrix and the sensor, wires taped down, plugged in over USB for testing"></a></td>
-<td><a href="PXL_20250725_125020179.jpg"><img src="PXL_20250725_125020179.jpg" alt="A finished half with white XDA keycaps and an empty trackball socket showing the sensor window"></a></td>
+<td><a href="Build%20PIctures/PXL_20250725_125013004.jpg"><img src="Build%20PIctures/PXL_20250725_125013004.jpg" alt="A half with the KB2040 connected to the matrix and the sensor, wires taped down, plugged in over USB for testing"></a></td>
+<td><a href="Build%20PIctures/PXL_20250725_125020179.jpg"><img src="Build%20PIctures/PXL_20250725_125020179.jpg" alt="A finished half with white XDA keycaps and an empty trackball socket showing the sensor window"></a></td>
 </tr>
 <tr>
 <td><b>7. Connecting and testing.</b> The matrix and the sensor are soldered to the KB2040, the wires are taped down, and the half is plugged in over USB to test it before closing the case.</td>
@@ -253,11 +254,11 @@ These values reset to the defaults when the keyboard is unplugged.
 
 The main typing layer uses **Night**, an alternative layout that puts a letter (**R**) on the left thumb so the thumbs do more of the work. These screenshots are from comparing it with other layouts:
 
-![The Night layout, colour-coded by how often each key is used](2025-07-29%2017_02_53-Night%20-%20A%20Thumb%20Letter%20Utilizing%20Keyboard%20Layout.png)
+![The Night layout, colour-coded by how often each key is used](layout%20pictures/2025-07-29%2017_02_53-Night%20-%20A%20Thumb%20Letter%20Utilizing%20Keyboard%20Layout.png)
 
-![Key usage heat map for the Night layout](2025-07-29%2017_09_36-Keyboard%20Layout%20Stats.png)
+![Key usage heat map for the Night layout](layout%20pictures/2025-07-29%2017_09_36-Keyboard%20Layout%20Stats.png)
 
-![Night layout with bigram arrows showing how the fingers move between keys](2025-07-29%2017_14_14-Layouts.png)
+![Night layout with bigram arrows showing how the fingers move between keys](layout%20pictures/2025-07-29%2017_14_14-Layouts.png)
 
 ### Layers
 
@@ -274,11 +275,11 @@ Early layer designs and the printed keymap reference:
 
 | QWERTY | Night | Function |
 |---|---|---|
-| ![QWERTY layer design](DuoTractyl%20qwerty%20layer%200.png) | ![Night layer design with home-row mods](DuoTractyl%20night%20layer%201.png) | ![Function layer design with the sensitivity keys](DuoTractyl%20qwerty%20layer%202.png) |
+| ![QWERTY layer design](layout%20pictures/DuoTractyl%20qwerty%20layer%200.png) | ![Night layer design with home-row mods](layout%20pictures/DuoTractyl%20night%20layer%201.png) | ![Function layer design with the sensitivity keys](layout%20pictures/DuoTractyl%20qwerty%20layer%202.png) |
 
-![Printable keymap reference for all three layers](keymap%20print%202.png)
+![Printable keymap reference for all three layers](layout%20pictures/keymap%20print%202.png)
 
-Other keymap images in this folder: [`keymap print.png`](keymap%20print.png), [`keymap image.png`](keymap%20image.png), [`keymap image (1).png`](keymap%20image%20%281%29.png) and [`via keyboard layout 39 printout.png`](via%20keyboard%20layout%2039%20printout.png). [`keymap print layout template.af`](keymap%20print%20layout%20template.af) is the Affinity template used to make the printouts.
+Other keymap images in the `layout pictures` folder: [`keymap print.png`](layout%20pictures/keymap%20print.png), [`keymap image.png`](layout%20pictures/keymap%20image.png), [`keymap image (1).png`](layout%20pictures/keymap%20image%20%281%29.png) and [`via keyboard layout 39 printout.png`](layout%20pictures/via%20keyboard%20layout%2039%20printout.png). [`keymap print layout template.af`](layout%20pictures/keymap%20print%20layout%20template.af) is the Affinity template used to make the printouts.
 
 ---
 
@@ -409,13 +410,16 @@ Every working firmware build is saved in [`last working setup`](last%20working%2
 ```
 duotractyl keyboard/
 ├── README.md                              ← this file
-├── 3d Models/                             ← STL files for the case, holder and bottom plate
+├── LICENSE                                ← MIT License
 ├── 1 Left.jpg, 2 Right.jpg                ← photos of the finished keyboard
-├── PXL_2025*.jpg                          ← build log photos
-├── DuoTractyl * layer *.png               ← early layer designs
-├── keymap print*.png, keymap image*.png   ← printable keymap references
-├── keymap print layout template.af        ← Affinity template for the printouts
-├── 2025-07-29 *.png                       ← Night layout research screenshots
+├── 3d Models/                             ← STL files for the case, holder and bottom plate
+├── Build PIctures/                        ← build log photos (PXL_2025*.jpg)
+├── layout pictures/
+│   ├── DuoTractyl * layer *.png           ← early layer designs
+│   ├── keymap print*.png, keymap image*.png ← printable keymap references
+│   ├── via keyboard layout 39 printout.png
+│   ├── keymap print layout template.af    ← Affinity template for the printouts
+│   └── 2025-07-29 *.png                   ← Night layout research screenshots
 ├── last working setup/                    ← every working firmware version (2.1 → 2.10)
 ├── qmk keyboard files backup/             ← early QMK files and VIA layouts
 ├── saved via layouts/                     ← every saved VIA layout (10 → 39)
@@ -423,3 +427,9 @@ duotractyl keyboard/
 ├── upload design to via before using via/ ← VIA definition files (load these in VIA's Design tab)
 └── whole folder/                          ← full project snapshot
 ```
+
+---
+
+## License
+
+This project is released under the [MIT License](LICENSE).
