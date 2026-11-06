@@ -1,0 +1,62 @@
+import json
+import os
+import re
+
+# Define the DuoTractyl row structure (keys per row segment)
+# This matches the 7-7-7-6-3-2-3 per half pattern
+ROW_SIZES = [7, 7, 7, 6, 3, 2, 3]
+
+def format_layer(layer_list):
+    """Formats a single layer list into structured rows."""
+    output = ["[\n"]
+    idx = 0
+    
+    # We do this twice: once for the Left half, once for the Right half
+    for side in ["Left Half", "Right Half"]:
+        output.append(f"      // {side}\n")
+        for size in ROW_SIZES:
+            row_keys = layer_list[idx : idx + size]
+            # Wrap keys in quotes and join with commas
+            formatted_row = ", ".join(f'"{k}"' for k in row_keys)
+            # Add trailing comma if not the absolute last key of the layer
+            suffix = "," if idx + size < len(layer_list) else ""
+            output.append(f"      {formatted_row}{suffix}\n")
+            idx += size
+        if side == "Left Half":
+            output.append("\n") # Space between halves
+            
+    output.append("    ]")
+    return "".join(output)
+
+def process_files():
+    for filename in os.listdir('.'):
+        if filename.endswith('.json') and "design" not in filename.lower():
+            try:
+                with open(filename, 'r') as f:
+                    data = json.load(f)
+                
+                # Check if it's a VIA layout file
+                if 'layers' in data and isinstance(data['layers'], list):
+                    print(f"Formatting {filename}...")
+                    
+                    # Manual string building for the layers to force the custom layout
+                    layers_strings = []
+                    for layer in data['layers']:
+                        layers_strings.append(format_layer(layer))
+                    
+                    # Build the final file string
+                    # We use a trick here: replace the layers part of the original JSON
+                    data['layers'] = "PLACEHOLDER"
+                    final_json = json.dumps(data, indent=2)
+                    
+                    # Inject our custom-formatted layers into the JSON string
+                    layers_block = ",\n  \"layers\": [\n    " + ",\n    ".join(layers_strings) + "\n  ]"
+                    final_content = re.sub(r',\s+"layers": "PLACEHOLDER"', layers_block, final_json)
+                    
+                    with open(filename, 'w') as f:
+                        f.write(final_content)
+            except Exception as e:
+                print(f"Skipped {filename}: {e}")
+
+if __name__ == "__main__":
+    process_files()
