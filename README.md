@@ -19,6 +19,7 @@ It runs [QMK firmware](https://qmk.fm) on two Adafruit KB2040 (RP2040) controlle
 - [Choosing the components](#choosing-the-components)
 - [The 3D-printed case](#the-3d-printed-case)
 - [Hand-wiring](#hand-wiring)
+- [Build log](#build-log)
 - [Firmware](#firmware)
 - [Keyboard layout](#keyboard-layout)
 - [Compiling the firmware](#compiling-the-firmware)
@@ -162,6 +163,47 @@ The halves are joined by a **3.5 mm 4-pin (TRRS) audio cable**, with a matching 
 | GND | Shared ground |
 
 An audio cable connects each pin straight through to the same pin on the other end. Both halves also use the same KB2040 pins. So the crossover has to be in the wiring of one jack: **TX of one half must reach RX of the other.** If you only get key presses from the right half, check this crossover first.
+
+---
+
+## Build log
+
+These photos show the build in order, from May to July 2025. The case is shown from underneath, so the trackball socket looks like it's on the wrong side.
+
+<table>
+<tr>
+<td width="50%"><a href="PXL_20250528_053931519.jpg"><img src="PXL_20250528_053931519.jpg" alt="Underside of one half with switches installed and a 1N4148 diode soldered to each switch"></a></td>
+<td width="50%"><a href="PXL_20250528_084043444.jpg"><img src="PXL_20250528_084043444.jpg" alt="The same half with the diode legs joined into rows and blue wire added for the columns"></a></td>
+</tr>
+<tr>
+<td><b>1. Switches and diodes.</b> The switches are pressed into the printed case, and a 1N4148 diode is soldered to each one. The diode legs are left long so they can be bent over and joined to form the row wires.</td>
+<td><b>2. Rows and columns.</b> The bare diode legs are joined along each row. Insulated blue wire links each column, so the column wires can cross over the rows without touching them.</td>
+</tr>
+<tr>
+<td><a href="PXL_20250602_132059770.jpg"><img src="PXL_20250602_132059770.jpg" alt="Both halves side by side: one with only switches installed, one fully wired"></a></td>
+<td><a href="PXL_20250724_025341112.jpg"><img src="PXL_20250724_025341112.jpg" alt="Two Adafruit KB2040 boards with blue wires soldered to every pin, next to two round PMW3360 sensor boards"></a></td>
+</tr>
+<tr>
+<td><b>3. One half wired, one to go.</b> The right side of the photo shows a fully wired matrix. The other half has its switches in and is ready for diodes.</td>
+<td><b>4. Controllers and sensors.</b> Wires soldered to every pin on both KB2040s, and to the two PMW3360 sensor boards.</td>
+</tr>
+<tr>
+<td><a href="PXL_20250724_032421143.jpg"><img src="PXL_20250724_032421143.jpg" alt="The second half fully wired, held up next to a KB2040 and a sensor board with wires attached"></a></td>
+<td><a href="PXL_20250724_041526902.jpg"><img src="PXL_20250724_041526902.jpg" alt="A wired half above both sensor boards and both KB2040s mounted in printed holders with their audio jacks and USB-C ports"></a></td>
+</tr>
+<tr>
+<td><b>5. Second half wired.</b> Both matrices are done. The brass heat-set inserts around the edge of the case take the screws that hold the case together.</td>
+<td><b>6. Holders fitted.</b> Each KB2040 sits in its 3D-printed holder next to the 3.5 mm audio jack, with the USB-C port facing out of the back of the case.</td>
+</tr>
+<tr>
+<td><a href="PXL_20250725_125013004.jpg"><img src="PXL_20250725_125013004.jpg" alt="A half with the KB2040 connected to the matrix and the sensor, wires taped down, plugged in over USB for testing"></a></td>
+<td><a href="PXL_20250725_125020179.jpg"><img src="PXL_20250725_125020179.jpg" alt="A finished half with white XDA keycaps and an empty trackball socket showing the sensor window"></a></td>
+</tr>
+<tr>
+<td><b>7. Connecting and testing.</b> The matrix and the sensor are soldered to the KB2040, the wires are taped down, and the half is plugged in over USB to test it before closing the case.</td>
+<td><b>8. Keycaps on.</b> A finished half with its XDA keycaps. The empty trackball socket shows the small window that the PMW3360 looks up through.</td>
+</tr>
+</table>
 
 ---
 
@@ -369,6 +411,7 @@ duotractyl keyboard/
 ├── README.md                              ← this file
 ├── 3d Models/                             ← STL files for the case, holder and bottom plate
 ├── 1 Left.jpg, 2 Right.jpg                ← photos of the finished keyboard
+├── PXL_2025*.jpg                          ← build log photos
 ├── DuoTractyl * layer *.png               ← early layer designs
 ├── keymap print*.png, keymap image*.png   ← printable keymap references
 ├── keymap print layout template.af        ← Affinity template for the printouts
