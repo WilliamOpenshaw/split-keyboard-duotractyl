@@ -48,15 +48,15 @@ It runs [QMK firmware](https://qmk.fm) on two Adafruit KB2040 (RP2040) controlle
 ## How it works
 
 ```
- ┌──────────── LEFT HALF ────────────┐        ┌──────────── RIGHT HALF ───────────┐
+                                                                       Computer
+                                                                          │ USB-C
+ ┌──────────── LEFT HALF ────────────┐        ┌──────────── RIGHT HALF ───┴───────┐
  │                                   │        │                                   │
  │  5×7 key matrix ──► KB2040        │ serial │        KB2040 ◄── 5×7 key matrix  │
  │                     (peripheral)  │◄──────►│   (main / USB)                    │
  │  PMW3360 sensor ──► SPI           │ 460800 │           SPI ◄── PMW3360 sensor  │
  │  (scroll ball)                    │  baud  │                   (cursor ball)   │
- └───────────────────────────────────┘        └──────────────┬────────────────────┘
-                                                             │ USB-C
-                                                          Computer
+ └───────────────────────────────────┘        └───────────────────────────────────┘
 ```
 
 1. **Each half is its own small computer.** Both halves have a KB2040 microcontroller that scans its own key matrix and reads its own PMW3360 optical sensor over SPI.
